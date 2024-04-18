@@ -1,9 +1,17 @@
-body {
+*{
   margin: 0;
+}
+.layout1{
+  
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: white;
+  position: fixed;
+  z-index: 1000;
 }
 
 .uphead {
@@ -138,3 +146,88 @@ body {
   padding: 8px;
   font-size: 16px;
 }
+/* ---------------video----------------------------------------------------------------------------------------------------------------------------- */
+.moviesection {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  overflow: hidden;
+  /* 섹션을 벗어나는 콘텐츠를 숨깁니다. */
+  height: 600px;
+}
+
+.moviediv {
+  margin: 0%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  /* 비디오를 섹션을 벗어나는 부분을 숨깁니다. */
+}
+
+.moviediv video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moviedivbar {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.moviedivbar ul {
+  padding: 0;
+  margin: 0;
+}
+
+.moviedivbar li {
+  list-style: none;
+  color: white;
+  display: inline-block;
+  width: 200px;
+}
+
+.barlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  overflow: hidden; /* 내부의 absolute 포지션된 요소를 가립니다. */
+}
+
+.moviedivbar a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+}
+
+.moviedivbar a:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.473);
+  transition: height 0.3s ease;
+}
+
+.moviedivbar a:hover:before {
+  height: 4px; /* 호버 시에 흰 바의 높이를 10px로 설정합니다. */
+  background-color: white;
+  /* 흰색으로 배경색 설정 */
+}
+/* ----------grid---------------------------------------------------------------------------------------------------- */

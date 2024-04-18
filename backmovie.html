@@ -1,18 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    .moviediv{
-      
-    }
-  </style>
+  <link rel="stylesheet" href="./css/header.css">
 </head>
+<style>
+  .gridsection {
+    padding: 780;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .grid-content {
+    margin: 0%;
+    background-color: green;
+    width: 100%;
+    height: 2000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 500px);
+    grid-template-areas:
+      "grid-box1 grid-box2 grid-box3 grid-box4"
+      "grid-box5 grid-box6 grid-box7 grid-box4"
+      "grid-box8 grid-box6 grid-box9 grid-box9"
+    ;
+  }
+
+  .grid-box {
+    padding: 15px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    height: 300px;
+  }
+
+  .grid-box img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .grid-box video {
+    width: 100%;
+  }
+
+  .grid-box1 {
+    grid-area: grid-box1;
+  }
+
+  .grid-box2 {
+    grid-area: grid-box2;
+  }
+
+  .grid-box3 {
+    grid-area: grid-box3;
+  }
+
+  .grid-box4 {
+    grid-area: grid-box4;
+  }
+
+  .grid-box5 {
+    grid-area: grid-box5;
+  }
+
+  .grid-box6 {
+    grid-area: grid-box6;
+  }
+
+  .grid-box7 {
+    grid-area: grid-box7;
+  }
+
+  .grid-box8 {
+    grid-area: grid-box8;
+  }
+
+  .grid-box9 {
+    grid-area: grid-box7;
+  }
+</style>
+
 <body>
-  <div>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/pnGXlV_Cs1s?si=x1lrSEG9iMXyONgP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div class="header">
+    <div class="uphead">
+      <ul class="lefthead">
+        <li style="background-color: white; color: black;">매일유업</li>
+        <li>매일아이</li>
+        <li>공식몰</li>
+        <li>maeil Do</li>
+      </ul>
+      <ul class="righthead">
+        <li class="rightheadlib"><b>전체메뉴</b></li>
+        <li class="rightheadlib"><b>EN</b></li>
+        <li><b>KR</b></li>
+        <li class="rightheadgogac">고객센터
+          <ul class="rightheadgogaclist">
+            <li>자주 묻는 질문</li>
+            <li>고객문의</li>
+            <li>문의내역확인</li>
+            <li>제품개선사례</li>
+            <li>고객불만처리절차</li>
+            <li>소비자중심경영 (CCM)</li>
+          </ul>
+        </li>
+        <li>로그인</li>
+        <li>인재채용</li>
+      </ul>
+    </div>
+    <div class="middlehead">
+      <img src="./images/maeillogo.png" alt="매일유업 로고">
+    </div>
+    <div class="bottomhead">
+      <ul>
+        <li>회사소개</li>
+        <li>브랜드</li>
+        <li>사회공언</li>
+        <li>상생 · 윤리경영</li>
+        <li>IR</li>
+        <li>PR</li>
+        <li><button>ESG 정보공개</button></li>
+      </ul>
+    </div>
   </div>
+  <div></div>
+  <div class="moviesection">
+    <div class="moviediv">
+      <video id="movie1" src="https://www.maeil.com/mov_index.mp4" autoplay loop muted width="100%"></video>
+      <img id="mvimg2" src="./images/mbgimg.jpg" alt="">
+      <img id="mvimg3" src="./images/mbgimg2.jpg" alt="">
+    </div>
+    <div class="moviedivbar">
+      <ul>
+        <li>
+          <div class="barlist" onclick="viewmovie(1)"><a href="#"> <span>매일유업</span></a></div>
+        </li>
+        <li>
+          <div class="barlist" onclick="viewmovie(2)"><a href="#"><span>함께 나누는 매일</span></a></div>
+        </li>
+        <li>
+          <div class="barlist" onclick="viewmovie(3)"><a href="#"> <span>글로벌 매일</span></a></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="gridsection">
+    <div class="grid-content">
+      <div class="grid-box grid-box1">
+        <img src="./images/table1.jpg" alt="">
+      </div>
+      <div class="grid-box grid-box2">
+        <img src="./images/tablereal2.jpg" alt="">
+      </div>
+      <div class="grid-box grid-box3">
+        <img src="./images/table2.png" alt="">
+      </div>
+      <div class="grid-box grid-box4">
+        <img src="./images/table3.jpg" alt="">
+      </div>
+      <div class="grid-box grid-box5">
+        <img src="./images/table4.jpg" alt="">
+      </div>
+      <div class="grid-box grid-box6">
+        <img src="./images/table5.jpg" alt="">
+      </div>
+      <div class="grid-box grid-box7">
+        <img src="./images/table6.jpg" alt="">
+      </div>
+      <div class="grid-box grid-box8">
+        <img src="./images/table7.jpg" alt="">
+      </div>
+      <div class="grid-box grid-box9">
+        <video src="./movie/table.mp4" controls></video>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
+
 </html>
+<script>
+  function viewmovie(index) {
+    document.getElementById("movie1");
+    document.getElementById("mvimg2");
+    document.getElementById("mvimg3");
+
+    if (index == 1) {
+      document.getElementById("movie1").style.display = "block";
+      document.getElementById("mvimg2").style.display = "none";
+      document.getElementById("mvimg3").style.display = "none";
+    } else if (index == 2) {
+      document.getElementById("movie1").style.display = "none";
+      document.getElementById("mvimg2").style.display = "block";
+      document.getElementById("mvimg3").style.display = "none";
+    } else {
+      document.getElementById("movie1").style.display = "none";
+      document.getElementById("mvimg2").style.display = "none";
+      document.getElementById("mvimg3").style.display = "block";
+    }
+  }
+</script>
