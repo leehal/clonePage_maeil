@@ -153,12 +153,14 @@
   z-index: 2;
   overflow: hidden;
   /* 섹션을 벗어나는 콘텐츠를 숨깁니다. */
-  height: 600px;
+  /* height: 600px; */
+  text-align: center;
 }
 
 .moviediv {
   margin: 0%;
-  height: 100%;
+  /* height: 100%; */
+  height: 600px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -231,3 +233,197 @@
   /* 흰색으로 배경색 설정 */
 }
 /* ----------grid---------------------------------------------------------------------------------------------------- */
+.gridsection {
+  padding-top: 600px;
+  text-align: center;
+  position: relative;
+  pointer-events: none;
+  /* gridsection에 대한 마우스 이벤트 비활성화 */
+  z-index: 2;
+  height: 1100px;
+  display: flex;
+  justify-content: center;
+}
+
+.gridsectionstart {
+  padding-top: 60px;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-content {
+  /* padding-top: 50px; */
+  pointer-events: all;
+  background-color: white;
+  width: 80%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 300px);
+  grid-template-areas:
+    "grid-box1 grid-box2 grid-box3 grid-box4"
+    "grid-box5 grid-box6 grid-box7 grid-box4"
+    "grid-box8 grid-box6 grid-box9 grid-box9"
+    "grid-box10 grid-box10 grid-box10 grid-box10"
+  ;
+  grid-gap: 15px;
+}
+
+.grid-box {
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  height: 100%;
+}
+
+.grid-box1 {
+  grid-area: grid-box1;
+}
+
+.grid-box2 {
+  grid-area: grid-box2;
+}
+
+.grid-box3 {
+  grid-area: grid-box3;
+}
+
+.grid-box4 {
+  grid-area: grid-box4;
+
+}
+
+.grid-box5 {
+  grid-area: grid-box5;
+}
+
+.grid-box6 {
+  grid-area: grid-box6;
+}
+
+.grid-box7 {
+  grid-area: grid-box7;
+}
+
+.grid-box8 {
+  grid-area: grid-box8;
+}
+
+.grid-box9 {
+  grid-area: grid-box9;
+}
+.grid-box10 {
+  grid-area: grid-box10;
+  height: 50px; 
+}
+
+.grid-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.grid-box .baxgong{
+  border: 1px solid rgb(177, 172, 172); 
+  color: black ;
+  height: 50px; 
+  display: flex; 
+  text-align: center; 
+  justify-content: center; 
+  margin-top: 5px; 
+  padding-top: 18px;
+}
+/* ----------last---------------------------------------------------------------------------------------------------- */
+.lastsection {
+  width: 100%;
+  height: 400px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backimg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* flex 컨테이너로 설정하여 아이템들을 옆으로 정렬 */
+  flex-wrap: wrap;
+  /* flex 아이템들이 한 줄에 들어갈 수 없을 때 줄 바꿈 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/hoverpage1.jpg"); /*일단 앱솔 넣어놈 hover에 따라 달라지게 수정*/
+}
+
+.square {
+  color: white;
+  padding: 10px;
+  width: calc(20% - 10px);
+  /* 4개의 정사각형을 한 줄에 배치하기 위해 너비를 조정 */
+  height: 200px;
+  /* 정사각형의 높이 설정 */
+  margin: 5px;
+  /* 정사각형 간의 간격 설정 */
+  background-color: #4b4a4a81;
+  /* 정사각형의 배경색 설정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+ .square1:hover {
+  background-image: url('./images/hoverpage1.jpg');
+}
+.square2:hover {
+  background-image: url('./images/hoverpage2.jpg');
+}
+.square3:hover {
+  background-image: url('./images/hoverpage3.jpg');
+}
+.square4:hover {
+  background-image: url('./images/hoverpage4.jpg');
+} 
+
+.lastbar {
+  width: 100%;
+  /* 가로 너비를 100%로 설정하여 가로 전체를 채우도록 함 */
+  height: 2px;
+  /* 높이 설정 */
+  /* 배경색 설정 */
+  margin-top: 10px;
+  /* 위쪽 여백 추가 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.bardiv{
+  height: 80px;
+  width: 80px; 
+  background-color: #665544; 
+  text-align: center; 
+  color: white; 
+  justify-content: center; 
+  align-items: center; 
+  display: flex;
+}
+.bardiv:hover {
+  background-color: rgb(42, 79, 148);
+}
+/* ----------footer---------------------------------------------------------------------------------------------------- */

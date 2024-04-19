@@ -6,83 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./css/header.css">
+  <style>
+    .footer {
+      background-color: rgb(56, 76, 114);
+      width: 100%;
+      height: 400px;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
 </head>
-<style>
-  .gridsection {
-    padding: 780;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-  }
-
-  .grid-content {
-    margin: 0%;
-    background-color: green;
-    width: 100%;
-    height: 2000px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 500px);
-    grid-template-areas:
-      "grid-box1 grid-box2 grid-box3 grid-box4"
-      "grid-box5 grid-box6 grid-box7 grid-box4"
-      "grid-box8 grid-box6 grid-box9 grid-box9"
-    ;
-  }
-
-  .grid-box {
-    padding: 15px;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    height: 300px;
-  }
-
-  .grid-box img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .grid-box video {
-    width: 100%;
-  }
-
-  .grid-box1 {
-    grid-area: grid-box1;
-  }
-
-  .grid-box2 {
-    grid-area: grid-box2;
-  }
-
-  .grid-box3 {
-    grid-area: grid-box3;
-  }
-
-  .grid-box4 {
-    grid-area: grid-box4;
-  }
-
-  .grid-box5 {
-    grid-area: grid-box5;
-  }
-
-  .grid-box6 {
-    grid-area: grid-box6;
-  }
-
-  .grid-box7 {
-    grid-area: grid-box7;
-  }
-
-  .grid-box8 {
-    grid-area: grid-box8;
-  }
-
-  .grid-box9 {
-    grid-area: grid-box7;
-  }
-</style>
 
 <body>
   <div class="header">
@@ -126,7 +62,6 @@
       </ul>
     </div>
   </div>
-  <div></div>
   <div class="moviesection">
     <div class="moviediv">
       <video id="movie1" src="https://www.maeil.com/mov_index.mp4" autoplay loop muted width="100%"></video>
@@ -148,41 +83,65 @@
     </div>
   </div>
   <div class="gridsection">
-    <div class="grid-content">
-      <div class="grid-box grid-box1">
-        <img src="./images/table1.jpg" alt="">
-      </div>
-      <div class="grid-box grid-box2">
-        <img src="./images/tablereal2.jpg" alt="">
-      </div>
-      <div class="grid-box grid-box3">
-        <img src="./images/table2.png" alt="">
-      </div>
-      <div class="grid-box grid-box4">
-        <img src="./images/table3.jpg" alt="">
-      </div>
-      <div class="grid-box grid-box5">
-        <img src="./images/table4.jpg" alt="">
-      </div>
-      <div class="grid-box grid-box6">
-        <img src="./images/table5.jpg" alt="">
-      </div>
-      <div class="grid-box grid-box7">
-        <img src="./images/table6.jpg" alt="">
-      </div>
-      <div class="grid-box grid-box8">
-        <img src="./images/table7.jpg" alt="">
-      </div>
-      <div class="grid-box grid-box9">
-        <video src="./movie/table.mp4" controls></video>
+    <div class="gridsectionstart">
+      <div class="grid-content">
+        <div class="grid-box grid-box1">
+          <img src="./images/table1.jpg" alt="">
+        </div>
+        <div class="grid-box grid-box2">
+          <img src="./images/tablereal2.jpg" alt="">
+        </div>
+        <div class="grid-box grid-box3">
+          <img src="./images/table6.jpg" alt="">
+        </div>
+        <div class="grid-box grid-box4">
+          <img src="./images/table7.jpg" alt="">
+        </div>
+        <div class="grid-box grid-box5">
+          <img src="./images/table2.png" alt="">
+        </div>
+        <div class="grid-box grid-box6">
+          <img src="./images/table4.jpg" alt="">
+        </div>
+        <div class="grid-box grid-box7">
+          <img src="./images/table5.jpg" alt="">
+        </div>
+        <div class="grid-box grid-box8">
+          <img src="./images/table3.jpg" alt="">
+        </div>
+        <div class="grid-box grid-box9">
+          <video src="./movie/table.mp4" controls></video>
+        </div>
+        <div class="grid-box grid-box10">
+          <div class="baxgong">
+            <ul>
+              <li>공지사항 > [공지] 매일유업 이용약관(23.11...</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <div class="lastsection">
+    <div class="backimg">
+      <div class="square"><img src="./images/sanghalog.png" alt="">상하목장</div>
+      <div class="square"><img src="./images/apsollog.png" alt="">앱솔루트</div>
+      <div class="square"><img src="./images/biolog.png" alt="">매일바이오</div>
+      <div class="square"><img src="./images/blistalog.png" alt="">바리스타룰스</div>
+      <div class="lastbar">
+        <img src="./images/lastbar.png" alt="" style="cursor: pointer;">
+        <div class="bardiv">전체메뉴</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+
+  </div>
 </body>
 
 </html>
 <script>
+  //movie 클릭시 함수
   function viewmovie(index) {
     document.getElementById("movie1");
     document.getElementById("mvimg2");
@@ -202,4 +161,12 @@
       document.getElementById("mvimg3").style.display = "block";
     }
   }
+  //last hover시 함수
+  const container = document.querySelector('.backimg');
+  const sq = document.querySelectorAll('.square');
+  sq.forEach((s, index) => {
+    s.addEventListener('mouseover', () => {
+      container.style.backgroundImage = `url('images/hoverpage${index + 1}.jpg')`;
+    });
+  });
 </script>
