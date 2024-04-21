@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+  }
+  
+  .uphead {
+    height: 40px;
+    background-color: rgb(42, 79, 148);
+  }
+  
+  .lefthead {
+    list-style: none;
+    padding: 0;
+    /* ul의 기본 여백 제거 */
+  }
+  
+  .lefthead li {
+    float: left;
+    display: flex;
+    height: 40px;
+    color: white;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lefthead li:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .righthead {
+    display: none;
+    list-style: none;
+    padding: 0;
+    /* ul의 기본 여백 제거 */
+  }
+  
+  .righthead li {
+    float: right;
+    display: flex;
+    height: 40px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .rightheadlib:hover {
+    float: right;
+    display: flex;
+    height: 40px;
+    background-color: rgb(148, 112, 71);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .rightheadgogac {
+    float: right;
+    display: flex; /* 초기에는 숨김 */
+    height: 40px;
+    background-color: rgb(148, 112, 71);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    position: relative; /* 부모로 설정 */
+  }
+  
+  .rightheadgogaclist {
+    display: none; /* 초기에는 숨김 */
+    position: absolute; /* 상대 위치 설정 */
+    top: 100%; /* 부모 요소의 아래에 위치 */
+    left: 0; /* 왼쪽 정렬 */
+    background-color: rgb(148, 112, 71);
+    width: 50px;
+  }
+  
+  .rightheadgogaclist li {
+    display: flex;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    font-size: 12px;
+  }
+  
+  .rightheadgogac:hover .rightheadgogaclist {
+    display: block; /* 호버 시 나타나도록 변경 */
+  }
+  
+  .middlehead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+  }
+  
+  .middlehead img {
+    width: 100px;
+    /* 이미지의 너비 조정 */
+    height: auto;
+    /* 이미지의 높이 자동 조정 */
+  }
+  /* .mobilemenu{
+    float: left;
+    background-color: green;
+    width: 50px;
+    height: 50px;
+  }
+  .mobilemenu img {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* width: 100%; */
+  /* } */ 
+  .bottomhead{
+    display: none;
+    padding: 0%;
+    height: 40px;
+    background-color: white;
+    text-align: center;
+  }
+  .bottomhead li {
+    list-style: none;
+    display: inline-block;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .bottomhead li:hover{
+    color: rgb(42, 79, 148);
+  }
+  .bottomhead li button{
+    color: rgb(42, 79, 148);
+    border: 1px solid rgb(42, 79, 148);
+    background-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  /* ---------------video----------------------------------------------------------------------------------------------------------------------------- */
+  .moviesection {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    overflow: hidden;
+    /* 섹션을 벗어나는 콘텐츠를 숨깁니다. */
+    /* height: 600px; */
+    text-align: center;
+  }
+  
+  .moviediv {
+    margin: 0%;
+    /* height: 100%; */
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* 비디오를 섹션을 벗어나는 부분을 숨깁니다. */
+    background-image: url("./images/3menu.png");
+  }
+  
+  .moviediv video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .moviedivbar {
+    display: none;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .moviedivbar ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .moviedivbar li {
+    list-style: none;
+    color: white;
+    display: inline-block;
+    width: 200px;
+  }
+  
+  .barlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    overflow: hidden; /* 내부의 absolute 포지션된 요소를 가립니다. */
+  }
+  
+  .moviedivbar a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .moviedivbar a:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.473);
+    transition: height 0.3s ease;
+  }
+  
+  .moviedivbar a:hover:before {
+    height: 4px; /* 호버 시에 흰 바의 높이를 10px로 설정합니다. */
+    background-color: white;
+    /* 흰색으로 배경색 설정 */
+  }
+  /* ----------grid---------------------------------------------------------------------------------------------------- */
+  .gridsection {
+    padding-top: 600px;
+    text-align: center;
+    position: relative;
+    pointer-events: none;
+    /* gridsection에 대한 마우스 이벤트 비활성화 */
+    z-index: 2;
+    height: 1100px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gridsectionstart {
+    padding-top: 60px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .grid-content {
+    /* padding-top: 50px; */
+    pointer-events: all;
+    background-color: white;
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 300px);
+    grid-template-areas:
+      "grid-box1 grid-box2"
+      "grid-box5 grid-box7"
+      "grid-box9 grid-box9"
+    ;
+    grid-gap: 15px;
+  }
+  
+  .grid-box {
+    margin: 0;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .grid-box1 {
+    grid-area: grid-box1;
+  }
+  
+  .grid-box2 {
+    grid-area: grid-box2;
+  }
+  
+  .grid-box3 {
+    display: none;
+    grid-area: grid-box3;
+  }
+  
+  .grid-box4 {
+    display: none;
+    grid-area: grid-box4;
+  
+  }
+  
+  .grid-box5 {
+    grid-area: grid-box5;
+  }
+  
+  .grid-box6 {
+    display: none;
+    grid-area: grid-box6;
+  }
+  
+  .grid-box7 {
+    grid-area: grid-box7;
+  }
+  
+  .grid-box8 {
+    display: none;
+    grid-area: grid-box8;
+  }
+  
+  .grid-box9 {
+    grid-area: grid-box9;
+  }
+  .grid-box10 {
+    display: none;
+    grid-area: grid-box10;
+    height: 50px; 
+  }
+  
+  .grid-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .grid-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .grid-box .baxgong{
+    border: 1px solid rgb(177, 172, 172); 
+    color: black ;
+    height: 50px; 
+    display: none; 
+    text-align: center; 
+    justify-content: center; 
+    margin-top: 5px; 
+    padding-top: 18px;
+  }
+  /* ----------last---------------------------------------------------------------------------------------------------- */
+  .lastsection {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .backimg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* flex 컨테이너로 설정하여 아이템들을 옆으로 정렬 */
+    flex-wrap: wrap;
+    /* flex 아이템들이 한 줄에 들어갈 수 없을 때 줄 바꿈 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/hoverpage1.jpg"); /*일단 앱솔 넣어놈 hover에 따라 달라지게 수정*/
+  }
+  
+  .square {
+    color: white;
+    padding: 10px;
+    width: calc(35% - 10px);
+    /* 4개의 정사각형을 한 줄에 배치하기 위해 너비를 조정 */
+    height: 200px;
+    /* 정사각형의 높이 설정 */
+    margin: 5px;
+    /* 정사각형 간의 간격 설정 */
+    background-color: #4b4a4a81;
+    /* 정사각형의 배경색 설정 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .square img {
+    width: 100%;
+    height: 100%;
+  }
+  .square p{
+    display: none;
+  }
+  
+   .square1:hover {
+    background-image: url('./images/hoverpage1.jpg');
+  }
+  .square2:hover {
+    background-image: url('./images/hoverpage2.jpg');
+  }
+  .square3:hover {
+    background-image: url('./images/hoverpage3.jpg');
+  }
+  .square4:hover {
+    background-image: url('./images/hoverpage4.jpg');
+  } 
+  
+  .lastbar {
+    width: 100%;
+    /* 가로 너비를 100%로 설정하여 가로 전체를 채우도록 함 */
+    height: 2px;
+    /* 높이 설정 */
+    /* 배경색 설정 */
+    margin-top: 10px;
+    /* 위쪽 여백 추가 */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .bardiv{
+    height: 80px;
+    width: 80px; 
+    background-color: #665544; 
+    text-align: center; 
+    color: white; 
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+  }
+  .bardiv:hover {
+    background-color: rgb(42, 79, 148);
+  }
+  /* ----------footer---------------------------------------------------------------------------------------------------- */
+  .footer {
+    background-color: rgb(56, 76, 114);
+    width: 100%;
+    height: 300px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
